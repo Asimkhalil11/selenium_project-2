@@ -34,4 +34,5 @@ def extract_comments_data(soup):
 
         }
         extracting_data.append(comments_data)
+
     return extracting_data
