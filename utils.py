@@ -42,6 +42,7 @@ def page_directory(page_url):
     channel_dir = os.path.join(os.getcwd(), channel_name)
     if not os.path.exists(channel_dir):
         os.mkdir(channel_dir)
+
     return channel_dir
 
 
@@ -50,6 +51,7 @@ def extract_all_video_links(soup):
     for video in soup.find_all('ytd-rich-grid-media'):
         video_url = 'https://www.youtube.com' + video.find('a', {'id': 'video-title-link'}).get('href')
         video_links.append(video_url)
+
     return video_links
 
 
